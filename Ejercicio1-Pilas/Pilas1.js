@@ -1,4 +1,4 @@
-// Pilas 3
+// Pilas 3 
 const pueblos = ["Pueblo Origen", "Pueblo1", "Pueblo2", "Pueblo3", "Destino"];
 
 const pilaIda = [];

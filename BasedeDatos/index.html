@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Alumnos</h1>
+  
+    <h2>Alta de Alumnos</h2>
+    <form id="altaForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required><br>
+  
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" required><br>
+  
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" required><br>
+  
+      <button type="button" onclick="altaAlumno()">Dar de Alta</button>
+    </form>
+  
+    <h2>Inscripción de Alumnos</h2>
+    <form id="inscripcionForm">
+      <label for="nombreAlumno">Nombre del Alumno:</label>
+      <input type="text" id="nombreAlumno" required><br>
+  
+      <label for="materia">Materia:</label>
+      <input type="text" id="materia" required><br>
+  
+      <button type="button" onclick="inscribirAlumno(nombreAlumno.value, materia.value)">Inscribir</button>
+    </form>
+  
+    <h2>Asignación de Calificaciones</h2>
+    <form id="calificacionesForm">
+      <label for="nombreAlumnoCalif">Nombre del Alumno:</label>
+      <input type="text" id="nombreAlumnoCalif" required><br>
+  
+      <label for="calificaciones">Calificaciones (separadas por coma):</label>
+      <input type="text" id="calificaciones" required><br>
+  
+      <button type="button" onclick="asignarCalificaciones(nombreAlumnoCalif.value, calificaciones.value.split(','))">Asignar</button>
+    </form>
+  
+    <h2>Creación de Grupos</h2>
+    <form id="gruposForm">
+      <label for="nombreGrupo">Nombre del Grupo:</label>
+      <input type="text" id="nombreGrupo" required><br>
+  
+      <label for="alumnos">Alumnos (separados por coma):</label>
+      <input type="text" id="alumnos" required><br>
+  
+      <button type="button" onclick="crearGrupo(nombreGrupo.value, alumnos.value.split(','))">Crear Grupo</button>
+    </form>
+  
+    <h2>Lista de Alumnos</h2>
+    <table id="tablaAlumnos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Edad</th>
+          <th>Materias</th>
+          <th>Calificaciones</th>
+        </tr>
+      </thead>
+      <tbody id="listaAlumnos"></tbody>
+    </table>
+  
+    <h2>Lista de Grupos</h2>
+    <table id="tablaGrupos">
+      <thead>
+        <tr>
+          <th>Grupo</th>
+          <th>Alumnos</th>
+        </tr>
+      </thead>
+      <tbody id="listaGrupos"></tbody>
+    </table>
+  
+  </body>
+<script src="script.js"></script>
+</html>

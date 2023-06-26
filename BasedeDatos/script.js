@@ -1,4 +1,4 @@
-// Almacenar alumnos
+// Almacenar alumnos 
 var alumnos = [];
 
 // Agregar alumno
